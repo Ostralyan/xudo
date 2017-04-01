@@ -1,0 +1,14 @@
+MANIFEST.in
+README.rst
+setup.cfg
+xudo/__init__.py
+xudo/cli.py
+xudo.egg-info/PKG-INFO
+xudo.egg-info/SOURCES.txt
+xudo.egg-info/dependency_links.txt
+xudo.egg-info/entry_points.txt
+xudo.egg-info/requires.txt
+xudo.egg-info/top_level.txt
+xudo/commands/__init__.py
+xudo/commands/base.py
+xudo/commands/logs.py
