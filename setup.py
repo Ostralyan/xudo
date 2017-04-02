@@ -36,7 +36,7 @@ setup(
     version = __version__,
     description = 'A command line program for docker',
     long_description = long_description,
-    url = 'https://github.com/ostralyan/xudo-cli',
+    url = 'https://github.com/ostralyan/xudo',
     author = 'Luke Xu',
     author_email = 'lukecxu@gmail.com',
     license = 'MIT License',

@@ -1,4 +1,5 @@
 docopt
+requests
 
 [test]
 coverage
