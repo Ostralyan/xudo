@@ -1,0 +1,5 @@
+build/*
+xudo.egg-info/*
+dist/*
+
+__pycache__/

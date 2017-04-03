@@ -1,3 +1,0 @@
-[console_scripts]
-xudo = xudo.cli:main
-
