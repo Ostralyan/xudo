@@ -4,6 +4,8 @@ Usage:
   xudo logs [api | changelog | migrations | rcash]
   xudo pull
   xudo build [-c -m -s -e -r -a -x]
+  xudo test [be | app | admin | core | it]
+  xudo watch
   xudo clean
   xudo -h | --help
   xudo --version
