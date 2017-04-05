@@ -1,11 +1,12 @@
 """
 xudo
 Usage:
-  xudo logs [api | changelog | migrations | rcash]
+  xudo logs (api | changelog | migrations | rcash)
   xudo pull
   xudo build [-c -m -s -e -r -a -x]
-  xudo test [be | app | admin | core | it]
+  xudo test (be | app | admin | core | it)
   xudo watch
+  xudo debug (php | hbng (app | admin | core))
   xudo clean
   xudo -h | --help
   xudo --version
@@ -25,6 +26,7 @@ Help:
   -x                                Api no cache
   For additional help using this tool, ask the asian dude that sits over there *points*
   or email luke@honestbuildings.com
+  or visit https://github.com/Ostralyan/xudo
 """
 
 
@@ -61,5 +63,5 @@ def get_path():
   return open(os.path.join(os.path.expanduser('~'),'.xudo_profile')).read().strip();
 
 def completion_notification():
-    r = requests.get('http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1')
-    os.system("osascript -e \'display notification \"" + r.json()[0]['content'] + "!\" with title \"xudo\"'");
+    text = "Done"
+    os.system("osascript -e \'display notification \"" + text + "!\" with title \"xudo\"'");
