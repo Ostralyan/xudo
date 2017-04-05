@@ -12,8 +12,8 @@ class Build(Base):
     """Say hello, world!"""
 
     def run(self):
-        java_path = os.path.join(self.path, "java")
-        php_path = os.path.join(self.path, "php")
+        java_path = os.path.join(self.path, "api/java")
+        php_path = os.path.join(self.path, "api/php")
 
         os.system("docker-compose stop")
         if self.options["-c"]:

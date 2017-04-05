@@ -5,3 +5,4 @@ from .clean import *
 from .test import *
 from .watch import *
 from .debug import *
+from .fix import *

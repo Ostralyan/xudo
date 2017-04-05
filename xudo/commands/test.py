@@ -12,9 +12,9 @@ class Test(Base):
     """Say hello, world!"""
 
     def run(self):
-        java_path = os.path.join(self.path, "java")
-        hbng_path = os.path.join(self.path, "../hbng")
-        test_path = os.path.join(self.path, "test")
+        java_path = os.path.join(self.path, "api/java")
+        hbng_path = os.path.join(self.path, "hbng")
+        test_path = os.path.join(self.path, "api/test")
 
         if self.options["be"]:
             os.chdir(java_path)

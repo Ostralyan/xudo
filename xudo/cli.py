@@ -10,13 +10,11 @@ Usage:
   xudo clean
   xudo -h | --help
   xudo --version
-Options:
-  -h --help                         Show this screen.
-  --version                         Show version.
 Examples:
   xudo logs api
   xudo build -cms
-Help:
+  xudo debug hbng app
+Options:
   -c                                Changelog
   -m                                Migrations
   -s                                Sql
@@ -24,6 +22,8 @@ Help:
   -r                                Rcash
   -a                                Api
   -x                                Api no cache
+  be                                Backend
+  it                                Integration Test
   For additional help using this tool, ask the asian dude that sits over there *points*
   or email luke@honestbuildings.com
   or visit https://github.com/Ostralyan/xudo

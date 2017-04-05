@@ -12,7 +12,7 @@ class Debug(Base):
     """Say hello, world!"""
 
     def run(self):
-        hbng_path = os.path.join(self.path, "../hbng")
+        hbng_path = os.path.join(self.path, "hbng")
 
         if self.options["php"]:
             os.system("docker exec api_api_1 /bin/sh -c \"sed -ie '\\$axdebug\.remote_host=192\.168\.65\.1' /etc/php/5.6/mods-available/xdebug.ini\"")
