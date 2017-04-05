@@ -12,7 +12,7 @@ class Debug(Base):
     """Say hello, world!"""
 
     def run(self):
-        hbng_path = os.path.join(self.path, "hbng")
+        hbngPath = os.path.join(self.path, "hbng")
 
         if self.options["php"]:
             os.system("docker exec api_api_1 /bin/sh -c \"sed -ie '\\$axdebug\.remote_host=192\.168\.65\.1' /etc/php/5.6/mods-available/xdebug.ini\"")
@@ -20,12 +20,12 @@ class Debug(Base):
             os.system("docker exec api_api_1 /bin/sh -c \"service php5.6-fpm restart\"")
         elif self.options["hbng"]:
             if self.options["app"]:
-                os.chdir(hbng_path)
+                os.chdir(hbngPath)
                 os.system("./debugKarma.sh app")
             elif self.options["admin"]:
-                os.chdir(hbng_path)
+                os.chdir(hbngPath)
                 os.system("./debugKarma.sh admin")
             elif self.options["core"]:
-                os.chdir(hbng_path)
+                os.chdir(hbngPath)
                 os.system("./debugKarma.sh core")
             

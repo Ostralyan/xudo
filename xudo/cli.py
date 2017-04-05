@@ -7,6 +7,7 @@ Usage:
   xudo test (be | app | admin | core | it)
   xudo watch
   xudo debug (php | hbng (app | admin | core))
+  xudo fix
   xudo clean
   xudo -h | --help
   xudo --version

@@ -12,5 +12,8 @@ class Fix(Base):
     """Docker logs"""
 
     def run(self):
-        output = subprocess.Popen(['git', 'status'], stdout=subprocess.PIPE);
-        print(output.stdout)
+        statusText = subprocess.Popen(['git status'], shell=True, stdout=subprocess.PIPE).communicate()[0]
+        if "" in statusText:
+            print("yes")
+        else:
+            print("no")
