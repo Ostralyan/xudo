@@ -3,12 +3,12 @@ xudo
 Usage:
   xudo logs (api | changelog | migrations | rcash)
   xudo pull
-  xudo build [-c -m -s -e -r -a -x]
+  xudo build [-c -m -s -e -r -a -x -n]
   xudo test (be | app | admin | core | it)
   xudo watch
   xudo debug (php | hbng (app | admin | core))
-  xudo fix
   xudo clean
+  xudo up
   xudo -h | --help
   xudo --version
 Examples:
@@ -23,6 +23,7 @@ Options:
   -r                                Rcash
   -a                                Api
   -x                                Api no cache
+  -n                                Angular
   be                                Backend
   it                                Integration Test
   For additional help using this tool, ask the asian dude that sits over there *points*
