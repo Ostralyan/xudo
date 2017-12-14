@@ -30,4 +30,4 @@ class Test(Base):
             os.system("gulp karma-hb-core")
         elif self.options["it"]:
             os.chdir(testPath)
-            os.system("gulp mocha")
+            os.system("npm run mocha")

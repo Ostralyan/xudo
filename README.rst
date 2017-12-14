@@ -8,11 +8,8 @@ Installation
 
 ``pip install xudo``
 
-``touch ~/.xudo_profile``
-
-Copy the absolute path of where the api and hbng folders are stored eg.
-
-/Users/ostralyan/dev
+Change `/Users/ostralyan/dev` to the absolute path of where the api and hbng folders are stored:
+``echo '/Users/ostralyan/dev' > ~/.xudo_profile``
 
 Usage
 -----
@@ -31,7 +28,7 @@ Usage
 * -a: Api
 * -x: Api no cache
 
-``xudo test (be | app | admin | core | it)`` - Runs the backend, frontend or integration tests 
+``xudo test (be | app | admin | core | it)`` - Runs the backend, frontend or integration tests
 
 * be: Backend
 * it: Integration Tests
