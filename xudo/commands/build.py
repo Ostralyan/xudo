@@ -14,6 +14,7 @@ class Build(Base):
     def run(self):
         javaPath = os.path.join(self.path, "api/java")
         phpPath = os.path.join(self.path, "api/php")
+        hbngPath = os.path.join(self.path, "hbng")
 
         # This needs to be a blocking call, otherwise there could be an issue when removing the containers
         subprocess.Popen("docker-compose stop", shell=True, stdout=subprocess.PIPE, cwd=javaPath).wait()
@@ -49,5 +50,7 @@ class Build(Base):
         if self.options["-x"]:
             os.chdir(phpPath)
             os.system("docker build --no-cache -t hb_api .")
+        if self.options["-n"]:
+            subprocess.Popen("gulp -nds", shell=True, stdout=subprocess.PIPE, cwd=hbngPath)
 
         subprocess.Popen("docker-compose up -d", shell=True, stdout=subprocess.PIPE, cwd=javaPath).wait()
