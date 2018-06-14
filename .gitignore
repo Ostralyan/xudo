@@ -1,6 +1,7 @@
 build/*
 xudo.egg-info/*
 dist/*
+.coverage
 
 __pycache__/*.pyc
 *.pyc
