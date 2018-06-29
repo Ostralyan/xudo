@@ -12,8 +12,8 @@ class Build(Base):
     """Say hello, world!"""
 
     def run(self):
-        javaPath = os.path.join(self.path, "api/java")
-        phpPath = os.path.join(self.path, "api/php")
+        javaPath = os.path.join(self.path, "hbng/java")
+        phpPath = os.path.join(self.path, "hbng/php")
         hbngPath = os.path.join(self.path, "hbng")
 
         # This needs to be a blocking call, otherwise there could be an issue when removing the containers

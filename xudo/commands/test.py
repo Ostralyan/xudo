@@ -5,9 +5,9 @@ from .base import Base
 
 class Test(Base):
     def run(self):
-        java_path = os.path.join(self.path, "api/java")
+        java_path = os.path.join(self.path, "hbng/java")
         hbng_path = os.path.join(self.path, "hbng")
-        test_path = os.path.join(self.path, "api/test")
+        test_path = os.path.join(self.path, "api/test") #this is broken.. will fix later
 
         if self.options["be"]:
             os.chdir(java_path)
