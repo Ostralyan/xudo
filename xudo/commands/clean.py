@@ -1,11 +1,9 @@
 """The logs command."""
 
 
-from json import dumps
-
 from .base import Base
 
-import os, sys
+import os
 
 
 class Clean(Base):

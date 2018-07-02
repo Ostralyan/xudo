@@ -8,6 +8,7 @@ Usage:
   xudo watch
   xudo debug (php | hbng (app | admin | core))
   xudo clean
+  xudo prune
   xudo up
   xudo -h | --help
   xudo --version

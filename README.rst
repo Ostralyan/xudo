@@ -6,9 +6,9 @@ xudo-cli
 Installation
 ------------
 
-``pip install xudo``
+``pip install xudo`` or ``python3 setup.py install`` to install with local files
 
-Change `/Users/ostralyan/dev` to the absolute path of where the api and hbng folders are stored:
+Change `/Users/ostralyan/dev` to the absolute path of where the hbng folder is stored:
 ``echo '/Users/ostralyan/dev' > ~/.xudo_profile``
 
 Usage
@@ -38,6 +38,13 @@ Usage
 ``xudo debug (php | hbng (app | admin | core))``  - Enables PHP debugging or runs front end unit test debugging
 
 ``xudo clean`` - Removes all dangling containers
+
+``xudo prune`` - Prompts to remove
+
+        - all stopped containers
+        - all networks not used by at least one container
+        - all dangling images
+        - all build cache
 
 ``xudo -h | --help`` - Shows the help screen
 
