@@ -1,8 +1,6 @@
 """The logs command."""
 
 
-from json import dumps
-
 from .base import Base
 
 import os, sys
