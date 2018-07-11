@@ -49,3 +49,15 @@ Usage
 ``xudo -h | --help`` - Shows the help screen
 
 ``xudo --version`` - Shows the version
+
+Pushing to Pypi
+---------------
+cd /path/to/xudo-cli
+
+rm -rf dist/
+
+python setup.py sdist bdist_wheel
+
+twine upload dist/*
+
+
