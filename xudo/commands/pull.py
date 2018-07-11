@@ -22,8 +22,15 @@ class Pull(Base):
 
             sys.stdout.write("\033[0;32m")
             print("************************************************************")
-            print("********************PULLING MY ES IMAGE*********************")
+            print("********************PULLING ES IMAGE*********************")
             print("************************************************************")
             sys.stdout.write("\033[0;0m")
 
             os.system("docker pull quay.io/honestbuildings/hb_elasticsearch")
+
+            sys.stdout.write("\033[0;32m")
+            print("************************************************************")
+            print("********************PULLING ELECTRON PDF IMAGE*********************")
+            print("************************************************************")
+            sys.stdout.write("\033[0;0m")
+            os.system("docker pull quay.io/honestbuildings/hb_electron_render_service:latest")
