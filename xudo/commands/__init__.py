@@ -5,5 +5,5 @@ from .clean import *
 from .prune import *
 from .test import *
 from .watch import *
-from .debug import *
-from .fix import *
+from .jooq import *
+from .dbpw import *
