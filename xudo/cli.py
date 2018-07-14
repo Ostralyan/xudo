@@ -1,15 +1,16 @@
 """
 xudo
 Usage:
+  xudo build [-c -m -s -a -x -n]
   xudo logs (api | changelog | migrations | rcash)
-  xudo pull
-  xudo build [-c -m -s -e -r -a -x -n]
-  xudo test (be | app | admin | core | it)
+  xudo up
   xudo watch
-  xudo debug (php | hbng (app | admin | core))
+  xudo jooq
+  xudo test (be | app | admin | core | it)
+  xudo pull
+  xudo dbpw
   xudo clean
   xudo prune
-  xudo up
   xudo -h | --help
   xudo --version
 Examples:
@@ -20,8 +21,6 @@ Options:
   -c                                Changelog
   -m                                Migrations
   -s                                Sql
-  -e                                Email
-  -r                                Rcash
   -a                                Api
   -x                                Api no cache
   -n                                Angular

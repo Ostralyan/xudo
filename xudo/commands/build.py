@@ -1,13 +1,10 @@
-"""The logs command."""
-
-
 from .base import Base
 
 import os, subprocess
 
 
 class Build(Base):
-    """Say hello, world!"""
+    """Builds the java, php, flyway or sql containers"""
 
     def run(self):
         javaPath = os.path.join(self.path, "hbng/java")
@@ -32,16 +29,6 @@ class Build(Base):
         if self.options["-s"]:
             os.chdir(javaPath)
             os.system("docker rm hbng_mysql_1")
-        if self.options["-r"]:
-            os.chdir(javaPath)
-            os.system("docker rm hbng_rcash_1")
-            os.system("docker rmi java/rcash")
-            os.system("./gradlew rcash:distDocker")
-        if self.options["-e"]:
-            os.chdir(javaPath)
-            os.system("docker rm hbng_email_1")
-            os.system("docker rmi java/email")
-            os.system("./gradlew email:distDocker")
         if self.options["-a"]:
             os.chdir(phpPath)
             os.system("docker build -t hb_api .")
@@ -49,6 +36,6 @@ class Build(Base):
             os.chdir(phpPath)
             os.system("docker build --no-cache -t hb_api .")
         if self.options["-n"]:
-            subprocess.Popen("gulp -nds", shell=True, stdout=subprocess.PIPE, cwd=hbngPath) # TODO Figure out if there is a cmd that achieve same result in webpack world
+            subprocess.Popen("npm run webpack -- -d", shell=True, stdout=subprocess.PIPE, cwd=hbngPath) # TODO Figure out if there is a cmd that achieve same result in webpack world
 
         subprocess.Popen("docker-compose up -d", shell=True, stdout=subprocess.PIPE, cwd=javaPath).wait()

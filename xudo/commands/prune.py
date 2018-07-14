@@ -1,6 +1,3 @@
-"""The prune command."""
-
-
 from .base import Base
 
 import os

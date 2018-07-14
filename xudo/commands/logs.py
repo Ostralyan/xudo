@@ -1,6 +1,3 @@
-"""The logs command."""
-
-
 from .base import Base
 
 import os

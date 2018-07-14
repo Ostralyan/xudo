@@ -1,9 +1,9 @@
-"""The test command."""
-import os
 from .base import Base
 
+import os
 
 class Test(Base):
+    """Runs backend, frontend, or integration tests"""
     def run(self):
         java_path = os.path.join(self.path, "hbng/java")
         hbng_path = os.path.join(self.path, "hbng")

@@ -1,13 +1,10 @@
-"""The logs command."""
-
-
 from .base import Base
 
 import os, sys
 
 
 class Pull(Base):
-    """Say hello, world!"""
+    """Pulls new copies of the mysql, elastic search and electron pdf render services"""
 
     def run(self):
             sys.stdout.write("\033[1;31m")
