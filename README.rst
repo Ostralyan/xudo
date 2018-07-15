@@ -1,4 +1,4 @@
-xudo-cli
+xudo
 ========
 
 *A quality of life tool to help bring up docker containers, access docker logs, generate jooq, run tests and more*
@@ -46,9 +46,9 @@ Usage
 
 ``xudo --version`` - Shows the version
 
-Pushing to Pypi
+Pushing to pypi
 ---------------
-cd /path/to/xudo-cli
+cd /path/to/xudo
 
 rm -rf dist/
 
