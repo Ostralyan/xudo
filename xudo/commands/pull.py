@@ -23,7 +23,7 @@ class Pull(Base):
 
             os.system("docker pull quay.io/honestbuildings/hb_elasticsearch")
 
-            sys.stdout.write("\033[0;32m")
+            sys.stdout.write("\033[1;34m")
             print("************************************************************")
             print("********************PULLING ELECTRON PDF IMAGE*********************")
             print("************************************************************")

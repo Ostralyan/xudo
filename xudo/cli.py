@@ -2,7 +2,7 @@
 xudo
 Usage:
   xudo build [-c -m -s -a -x -n]
-  xudo logs (api | changelog | migrations | rcash)
+  xudo logs (api | changelog | migrations)
   xudo up
   xudo watch
   xudo jooq
@@ -17,17 +17,17 @@ Examples:
   xudo logs api
   xudo build -cms
   xudo debug hbng app
-Options:
+Build Options:
   -c                                Changelog
   -m                                Migrations
   -s                                Sql
   -a                                Api
   -x                                Api no cache
   -n                                Angular
+Test Options:
   be                                Backend
   it                                Integration Test
-  For additional help using this tool, ask the asian dude that sits over there *points*
-  or email luke@honestbuildings.com
+  For additional help using this tool contact luke@honestbuildings.com
   or visit https://github.com/Ostralyan/xudo
 """
 
@@ -62,7 +62,10 @@ def main():
     completion_notification()
 
 def get_path():
-  return open(os.path.join(os.path.expanduser('~'),'.xudo_profile')).read().strip();
+  try:
+    return open(os.path.join(os.path.expanduser('~'),'.xudo_profile')).read().strip();
+  except IOError:
+    print("cannot find .xudo_profile in home directory")
 
 def completion_notification():
     text = "Done"

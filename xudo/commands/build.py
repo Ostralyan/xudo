@@ -36,6 +36,6 @@ class Build(Base):
             os.chdir(phpPath)
             os.system("docker build --no-cache -t hb_api .")
         if self.options["-n"]:
-            subprocess.Popen("npm run webpack -- -d", shell=True, stdout=subprocess.PIPE, cwd=hbngPath) # TODO Figure out if there is a cmd that achieve same result in webpack world
+            subprocess.Popen("npm run webpack -- -d", shell=True, stdout=subprocess.PIPE, cwd=hbngPath)
 
         subprocess.Popen("docker-compose up -d", shell=True, stdout=subprocess.PIPE, cwd=javaPath).wait()

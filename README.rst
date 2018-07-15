@@ -1,12 +1,12 @@
 xudo-cli
 ========
 
-*A command line program to replace dockdock, written in Python3*
+*A quality of life tool to help bring up docker containers, access docker logs, generate jooq, run tests and more*
 
 Installation
 ------------
 
-``pip install xudo`` or ``python3 setup.py install`` to install with local files
+``pip3 install xudo`` or ``python3 setup.py install`` to install with local files
 
 Change `/Users/ostralyan/dev` to the absolute path of where the hbng folder is stored:
 ``echo '/Users/ostralyan/dev' > ~/.xudo_profile``
@@ -14,17 +14,15 @@ Change `/Users/ostralyan/dev` to the absolute path of where the hbng folder is s
 Usage
 -----
 
-``xudo logs [api | changelog | migrations | rcash]`` - This will follow the logs of the chosen container
+``xudo logs [api | changelog | migrations]`` - This will follow the logs of the chosen container
 
 ``xudo pull`` - Pulls the Elastic Search and MySQL contianers
 
-``xudo build [-c -m -s -e -r -a -x]`` - Deletes the corresponding process(es) and the image(s) and builds the container from scratch
+``xudo build [-c -m -s -a -x]`` - Deletes the corresponding process(es) and the image(s) and builds the container from scratch
 
 * -c: Changelog
 * -m: Migrations
 * -s: Sql
-* -e: Email
-* -r: Rcash
 * -a: Api
 * -x: Api no cache
 
@@ -34,8 +32,6 @@ Usage
 * it: Integration Tests
 
 ``xudo watch`` - Watches hbng
-
-``xudo debug (php | hbng (app | admin | core))``  - Enables PHP debugging or runs front end unit test debugging
 
 ``xudo clean`` - Removes all dangling containers
 
